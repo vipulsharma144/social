@@ -58,7 +58,7 @@ export async function init() {
         reset: "Rate-Limit-Reset",
         total: "Rate-Limit-Total",
       },
-      max: 10,
+      max: 30,
       disableHeader: false,
       whitelist: (ctx) => {
         if (
@@ -89,7 +89,7 @@ export async function init() {
   app.use(
     jwt({
       secret: process.env.JWT_SECRET,
-    }).unless({ path: [/^\/public/] })
+    }).unless({ path: [/^\/public/, "/"] })
   );
   app.use(session(CONFIG, app));
   app.use(authMiddleware);
@@ -98,7 +98,7 @@ export async function init() {
 
   router.post("/public/login", auth.login);
   router.post("/public/register", auth.register);
-
+  router.get("/public/docs", user.docs);
   router.get("/posts", posts.getUsersPosts);
   router.get("/post/:id", posts.getPost);
   router.post("/post", posts.createPost);
@@ -113,6 +113,13 @@ export async function init() {
   router.post("/comment", posts.commentOnPost);
   router.get("/user", user.getMyPostsAndTodos);
   router.get("/user/:id", user.getPostsAndTodos);
+  router.get("/", (ctx) => {
+    console.log(ctx.path);
+
+    if (ctx.path === "/") {
+      ctx.response.redirect(`/public/docs`);
+    }
+  });
   return app;
 }
 
