@@ -6,9 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "start": "node dist",
-    "transpile": "./build.sh",
-    "stage": "npm install && npm run transpile && pm2 reload ecosystem.config.js --env staging",
-    "deploy": "npm install && npm run transpile && pm2 reload ecosystem.config.js --env production",
+    "build": "tsc",
     "test": "jest"
   },
   "prisma": {
