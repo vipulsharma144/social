@@ -1,4 +1,4 @@
-# CUTSHORT Assignment 1
+# Social
 
 ## Introduction
 
@@ -41,7 +41,7 @@ Params: [] Body: {"type":"json","raw":"{
 
 <hr />
 ### API:/login
- URL:http://localhost:3000/public/login 
+ URL:http://159.89.55.250:3000/public/login 
  Method: POST 
  Headers: [] 
  Params: [] Body: {"type":"json","raw":"{
@@ -51,7 +51,7 @@ Params: [] Body: {"type":"json","raw":"{
 
 <hr />
 ### API:/posts
- URL:http://localhost:3000/posts 
+ URL:http://159.89.55.250:3000/posts 
  Method: GET 
  Headers: [{"name":"Authorization","value":""}] 
  Params: [] Body: {"type":"json","raw":"{
@@ -61,8 +61,8 @@ Params: [] Body: {"type":"json","raw":"{
  }"}
 
 <hr />
-### API:/post
- URL:http://localhost:3000/post/641d6b00e6cb003a71c4d58b 
+### API:/post/:ID
+ URL:http://159.89.55.250:3000/post/641d6b00e6cb003a71c4d58b 
  Method: GET 
  Headers: [{"name":"Authorization","value":""}] 
  Params: [] Body: {"type":"json","raw":"{
@@ -73,7 +73,7 @@ Params: [] Body: {"type":"json","raw":"{
 
 <hr />
 ### API:/posts
- URL:http://localhost:3000/posts 
+ URL:http://159.89.55.250:3000/posts 
  Method: POST 
  Headers: [{"name":"Authorization","value":""}] 
  Params: [] Body: {"type":"json","raw":"{
@@ -83,7 +83,7 @@ Params: [] Body: {"type":"json","raw":"{
 
 <hr />
 ### API:/comment
- URL:http://localhost:3000/comment 
+ URL:http://159.89.55.250:3000/comment 
  Method: POST 
  Headers: [{"name":"Authorization","value":""}] 
  Params: [] Body: {"type":"json","raw":"{
@@ -93,7 +93,7 @@ Params: [] Body: {"type":"json","raw":"{
 
 <hr />
 ### API:/todos
- URL:http://localhost:3000/todos 
+ URL:http://159.89.55.250:3000/todos 
  Method: GET 
  Headers: [{"name":"Authorization","value":""}] 
  Params: [] Body: {"type":"json","raw":"{
@@ -103,29 +103,29 @@ Params: [] Body: {"type":"json","raw":"{
  }"}
 
 <hr />
-### API:/todo
- URL:http://localhost:3000/todo/641d6d87976c02a19d952c7e 
+### API:/todo/:ID
+ URL:http://159.89.55.250:3000/todo/641d6d87976c02a19d952c7e 
  Method: GET 
  Headers: [{"name":"Authorization","value":""}] 
  Params: []
 
 <hr />
 ### API:/user
- URL:http://localhost:3000/user/ 
+ URL:http://159.89.55.250:3000/user/ 
  Method: GET 
  Headers: [{"name":"Authorization","value":""}] 
  Params: []
 
 <hr />
-### API:/todo/toggle
- URL:http://localhost:3000/todo/toggle/641d6d7b976c02a19d952c7d 
+### API:/todo/toggle/:ID
+ URL:http://159.89.55.250:3000/todo/toggle/641d6d7b976c02a19d952c7d 
  Method: PATCH 
  Headers: [{"name":"Authorization","value":""}] 
  Params: []
 
 <hr />
 ### API:todo
- URL:http://localhost:3000/todo 
+ URL:http://159.89.55.250:3000/todo 
  Method: POST 
  Headers: [{"name":"Authorization","value":""}] 
  Params: [] Body: {"type":"json","raw":"{
